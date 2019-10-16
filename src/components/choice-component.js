@@ -3,24 +3,43 @@ import {Link} from 'react-router-dom'
 
 const ChoiceComponent = (props) => {
  
- return <div>
-              <h2>{props.player1Name} Pick Your Weapon</h2>
-              <br />Sword:<br />
-              <img src="https://image.flaticon.com/icons/svg/744/744729.svg" height="50px" /><br />
-              <button onClick={props.chooseSword}>Use Sword</button>
+ return <div> 
+          <div className="titlestrip">{props.player1Name}, Pick Your Weapon</div>
+              <div className="card-deck">
+              <div className="col-sm-1"></div>
+              <div className="col-lg-3">
+              <div className="card border-info mb-3">
+                <h3 class="cardheaderred">Sword</h3>
+                <div className="card-body">
+                  <img className="card-img-top" src="https://image.flaticon.com/icons/svg/744/744729.svg" padding="30px"></img>
+                  <button type="button" className="btn btn btn-dark" onClick={props.chooseSword}>Use Sword</button>
+                </div>
+              </div>
+              </div>
+              <div className="col-lg-3">
+              <div className="card border-info mb-3">
+                <h3 class="cardheaderblue">Shield</h3>
+                <div className="card-body">
+                  <img className="card-img-top" src="https://image.flaticon.com/icons/svg/1065/1065535.svg"></img>
+                  <button type="button" className="btn btn btn-dark" onClick={props.chooseShield}>Use Shield</button>
+              </div>
+              </div>
+              </div>
+              <div className="col-lg-3">
+              <div class="card border-info mb-3">
+              <h3 class="cardheaderyellow">Staff</h3>
+              <div class="card-body">
+                <img className="card-img-top" src="https://image.flaticon.com/icons/svg/1067/1067730.svg"></img>
+                <button type="button" className="btn btn btn-dark" onClick={props.chooseStaff}>Use Staff</button>
+              </div>
+              </div>
+              </div>
+              </div>
+              <h4>{props.player1Name} picked <strong>{props.weaponChoice}</strong></h4>
               <br />
-              <br />Shield:<br />
-              <img src="https://image.flaticon.com/icons/svg/1065/1065535.svg" height="50px"/><br />
-              <button onClick={props.chooseShield}>Use Shield</button>
-              <br />
-              <br />Staff:<br />
-              <img src="https://image.flaticon.com/icons/svg/1067/1067730.svg" height="50px"/><br />
-              <button onClick={props.chooseStaff}>Use Staff</button>
-              <br />
-              <br />
-              <h4>{props.player1Name} picked {props.weaponChoice}</h4>
-              <Link to="/Player2" onClick={props.chooseWinner}>Next</Link>
-              
+          
+              <Link to="/Player2" type="button" className="btn btn btn-dark">Next</Link>
+            
             </div>
 }
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .App-logo {
@@ -20,3 +21,57 @@
 .App-link {
   color: #09d3ac;
 }
+
+.backgroundPicture {
+  background-image: url(https://data.whicdn.com/images/276427256/original.gif);
+  background-size: cover;
+  height: 50em;
+}
+
+.space {
+  padding: 1em;
+}
+
+.titlestrip {
+  background-color:#424949 ;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3em;
+  color: white;
+
+}
+
+.card-img-top {
+  height: 150px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+​
+.card-deck {
+  text-align: center;
+  width: auto;
+  width: 95%;
+}
+
+.card-deck {
+  padding-top: 5em;
+}
+
+.cardheaderyellow {
+  background-color: #F5ED9C;
+  padding: .5em;
+}
+
+.cardheaderred {
+  background-color: #FFAEAB;
+  padding: .5em;
+}
+
+.cardheaderblue {
+  background-color: #6DE3F4;
+  padding: .5em;
+}
+
+
+
+
+

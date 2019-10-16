@@ -51,19 +51,19 @@ function App() {
         } if (weaponChoice === "sword" && weaponChoice2 === "shield"){
           setWinner(player2Name)
         } if (weaponChoice === "sword" && weaponChoice2 === "sword"){
-          setWinner("no one. You tied.")
+          setWinner("no one. You tied!")
         } if (weaponChoice === "staff" && weaponChoice2 === "shield"){
           setWinner(player1Name)
         } if (weaponChoice === "staff" && weaponChoice2 === "sword"){
           setWinner(player2Name)
         } if (weaponChoice === "staff" && weaponChoice2 === "staff"){
-          setWinner("no one. You tied.")
+          setWinner("no one. You tied!")
         } if (weaponChoice === "shield" && weaponChoice2 === "sword"){
           setWinner(player1Name)
         } if (weaponChoice === "shield" && weaponChoice2 === "staff"){
           setWinner(player2Name)
         } if (weaponChoice === "shield" && weaponChoice2 === "shield"){
-          setWinner("no one. You tied.")
+          setWinner("no one. You tied!")
         }
       }
 
@@ -73,8 +73,8 @@ function App() {
         <div>
           <Route path="/" exact render={(props) => <NameComponent player1Name={player1Name} player2Name={player2Name} onAddNames={onAddNames} {...props} />} />
           <Route path="/Player1" render={(props) => <ChoiceComponent player1Name={player1Name} chooseSword={chooseSword} chooseShield={chooseShield} chooseStaff={chooseStaff} weaponChoice={weaponChoice} {...props} /> }/>
-          <Route path="/Player2" render={(props) => <ChoiceComponentOne player2Name={player2Name} chooseSword={chooseSword2} chooseShield={chooseShield2} chooseStaff={chooseStaff2} weaponChoice={weaponChoice2} {...props} /> } />
-          <Route path="/Winner" render={(props) => <WinnerComponent chooseWinner={chooseWinner} winner={winner} {...props} />} />
+          <Route path="/Player2" render={(props) => <ChoiceComponentOne player2Name={player2Name} chooseSword={chooseSword2} chooseShield={chooseShield2} chooseStaff={chooseStaff2} weaponChoice={weaponChoice2} chooseWinner={chooseWinner} {...props} /> } />
+          <Route path="/Winner" render={(props) => <WinnerComponent chooseWinner={chooseWinner} winner={winner} player1Name={player1Name} player2Name={player2Name} weaponChoice={weaponChoice} weaponChoice2={weaponChoice2} {...props} />} />
         </div>
       </BrowserRouter>
       
