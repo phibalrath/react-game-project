@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ChoiceComponent = (props) => {
  
@@ -18,6 +19,8 @@ const ChoiceComponent = (props) => {
               <br />
               <br />
               <h4>{props.player1Name} picked {props.weaponChoice}</h4>
+              <Link to="/Player2" onClick={props.chooseWinner}>Next</Link>
+              
             </div>
 }
 
