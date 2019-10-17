@@ -7,6 +7,7 @@ const NameComponent = (props) => {
         <div className="backgroundPicture container-fluid">
           <div className="titlestrip">
               Sword X Shield X Staff
+              <h5>A Rock-Paper-Scissor Game</h5>
           </div>
           <br />
           <h4>Choose Player Name</h4>

@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom'
 const WinnerComponent = (props) => {
 
 return <div>
-          <div className="titlestrip">Sword X Shield X Staff</div>
+          <div className="titlestrip">Sword X Shield X Staff
+          <h5>A Rock-Paper-Scissor Game</h5>
+          </div>
           <br />
           <div class="alert alert-secondary" role="alert">
                {props.player1Name} played {props.weaponChoice}

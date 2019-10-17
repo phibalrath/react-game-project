@@ -77,8 +77,7 @@ function App() {
           <Route path="/Winner" render={(props) => <WinnerComponent chooseWinner={chooseWinner} winner={winner} player1Name={player1Name} player2Name={player2Name} weaponChoice={weaponChoice} weaponChoice2={weaponChoice2} {...props} />} />
         </div>
       </BrowserRouter>
-      
-      
+    
     </div>
   );
 }
